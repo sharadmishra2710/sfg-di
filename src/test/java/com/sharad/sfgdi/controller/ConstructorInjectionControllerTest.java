@@ -1,10 +1,8 @@
 package com.sharad.sfgdi.controller;
 
-import com.sharad.sfgdi.service.GreetingServiceImpl;
+import com.sharad.sfgdi.service.PropertyGreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectionControllerTest {
 
@@ -12,7 +10,7 @@ class ConstructorInjectionControllerTest {
 
     @BeforeEach
     void setUp() {
-        controller=new ConstructorInjectionController(new GreetingServiceImpl());
+        controller=new ConstructorInjectionController(new PropertyGreetingServiceImpl());
     }
 
     @Test
