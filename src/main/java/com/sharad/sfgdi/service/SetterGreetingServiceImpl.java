@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class SetterGreetingServiceImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "gretting !! setter inj";
+        return "gretting !!SetterGreetingServiceImpl";
     }
 }
