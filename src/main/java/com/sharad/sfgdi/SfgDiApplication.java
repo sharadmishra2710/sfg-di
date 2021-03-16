@@ -1,9 +1,6 @@
 package com.sharad.sfgdi;
 
-import com.sharad.sfgdi.controller.ConstructorInjectionController;
-import com.sharad.sfgdi.controller.MyController;
-import com.sharad.sfgdi.controller.PropertyInjectedController;
-import com.sharad.sfgdi.controller.SetterInjectionController;
+import com.sharad.sfgdi.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +11,10 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 
 		ApplicationContext cxt=SpringApplication.run(SfgDiApplication.class, args);
+		System.out.println("----------------------i 18 n --------------------------------");
+		I18nController i18nController=cxt.getBean("i18nController", I18nController.class);
+		System.out.println(i18nController.getHello());
+		System.out.println("--------------END -------i 18 n ------------------------------");
 		MyController myController=cxt.getBean("myController", MyController.class);
 		System.out.println("Main Started going to get data from context");
 		System.out.println(myController.getHello());
